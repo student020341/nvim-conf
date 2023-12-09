@@ -25,7 +25,7 @@ require("lazy").setup({
 	      local configs = require("nvim-treesitter.configs")
 
 	      configs.setup({
-		  ensure_installed = { "lua", "vim", "vimdoc", "rust" },
+		  ensure_installed = { "lua", "vim", "vimdoc", "rust", "go" },
 		  sync_install = false,
 		  highlight = { enable = true },
 		  indent = { enable = true },  
@@ -60,6 +60,7 @@ require("lazy").setup({
 -- enable lsp?
 local lspconfig = require("lspconfig")
 lspconfig.rust_analyzer.setup {}
+lspconfig.gopls.setup {}
 
 -- enable autocomplete?
 local cmp = require('cmp')
@@ -69,7 +70,7 @@ cmp.setup({
     {name = 'nvim_lsp'},
   },
   mapping = {
-    ['<C-y>'] = cmp.mapping.confirm({select = false}),
+    ['<Tab>'] = cmp.mapping.confirm({select = false}),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<Up>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
     ['<Down>'] = cmp.mapping.select_next_item({behavior = 'select'}),
