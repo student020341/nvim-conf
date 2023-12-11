@@ -2,6 +2,7 @@
 
 vim.api.nvim_win_set_option(0, "number", true)
 vim.api.nvim_win_set_option(0, "relativenumber", true)
+vim.api.nvim_win_set_option(0, "cursorline", true)
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
