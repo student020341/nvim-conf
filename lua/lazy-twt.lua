@@ -71,7 +71,6 @@ lspconfig.gopls.setup({})
 
 -- enable autocomplete?
 local cmp = require("cmp")
-
 cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
@@ -95,6 +94,7 @@ cmp.setup({
 				cmp.complete()
 			end
 		end),
+		["<C-space>"] = cmp.mapping.complete(),
 	},
 	snippet = {
 		expand = function(args)
