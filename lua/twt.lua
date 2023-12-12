@@ -7,6 +7,7 @@ vim.api.nvim_win_set_option(0, "cursorline", true)
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 -- notes
 
