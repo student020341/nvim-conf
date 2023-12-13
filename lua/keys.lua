@@ -4,6 +4,7 @@ vim.keymap.set("n", "<leader>ff", teleb.find_files, {})
 vim.keymap.set("n", "<leader>fg", teleb.live_grep, {})
 vim.keymap.set("n", "<leader>fb", teleb.buffers, {})
 vim.keymap.set("n", "<leader>fh", teleb.help_tags, {})
+vim.keymap.set("n", "<leader>fr", teleb.lsp_references, {})
 
 -- lspconfig
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
